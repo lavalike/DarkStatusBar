@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -19,8 +20,20 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+publish {
+    userOrg = 'lavalike'//bintray.com用户名
+    groupId = 'com.wangzhen'//jcenter上的路径
+    artifactId = 'DarkStatusBar'//项目名称
+    publishVersion = '0.0.1'
+    desc = '更改状态栏内文字和图标亮暗状态'
+    website = 'https://github.com/lavalike/DarkStatusBar'
 }
