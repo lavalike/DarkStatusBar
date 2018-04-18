@@ -1,6 +1,6 @@
 package com.wangzhen.statusbar.listener;
 
-import android.app.Activity;
+import android.content.Context;
 
 /**
  * 状态栏 暗/亮 操作
@@ -10,14 +10,14 @@ public interface StatusBar {
     /**
      * 状态变文字图标变暗
      *
-     * @param activity 当前Activity
+     * @param ctx 上下文
      */
-    void fitDark(Activity activity);
+    void fitDark(Context ctx);
 
     /**
      * 状态变文字图标变亮
      *
-     * @param activity 当前Activity
+     * @param ctx 上下文
      */
-    void fitLight(Activity activity);
+    void fitLight(Context ctx);
 }

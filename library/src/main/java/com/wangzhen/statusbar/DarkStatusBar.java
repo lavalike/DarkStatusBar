@@ -1,9 +1,11 @@
 package com.wangzhen.statusbar;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Build;
 import android.view.Window;
 
+import com.wangzhen.statusbar.helper.ContextHelper;
 import com.wangzhen.statusbar.helper.OSHelper;
 import com.wangzhen.statusbar.impl.RomActionImpl;
 import com.wangzhen.statusbar.listener.RomAction;
@@ -32,24 +34,25 @@ public class DarkStatusBar implements StatusBar {
     /**
      * 当前Activity状态栏修改为暗色
      *
-     * @param activity 当前Activity
+     * @param ctx 上下文
      */
     @Override
-    public void fitDark(Activity activity) {
-        fit(activity, true);
+    public void fitDark(Context ctx) {
+        fit(ctx, true);
     }
 
     /**
      * 当前Activity状态栏修改为亮色
      *
-     * @param activity 当前Activity
+     * @param ctx 上下文
      */
     @Override
-    public void fitLight(Activity activity) {
-        fit(activity, false);
+    public void fitLight(Context ctx) {
+        fit(ctx, false);
     }
 
-    private void fit(Activity activity, boolean isDark) {
+    private void fit(Context ctx, boolean isDark) {
+        Activity activity = ContextHelper.getRealActivity(ctx);
         if (isLegal(activity)) {
             Window window = activity.getWindow();
             if (OSHelper.isFlyme()) {
