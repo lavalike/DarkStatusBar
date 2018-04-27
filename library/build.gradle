@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
-def vCode = 2
-def vName = '0.0.2'
+def vCode = 3
+def vName = '0.0.3'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
