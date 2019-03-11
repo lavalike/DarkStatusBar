@@ -1,18 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
-def vCode = 3
-def vName = '0.0.3'
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
-
-
+    compileSdkVersion 28
     defaultConfig {
         minSdkVersion 1
-        targetSdkVersion 25
-        versionCode vCode
-        versionName vName
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -28,9 +21,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
+def vName = '0.0.4'
 publish {
     userOrg = 'lavalike'//bintray.com用户名
     groupId = 'com.wangzhen'//jcenter上的路径

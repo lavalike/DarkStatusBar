@@ -21,11 +21,11 @@ public class FitHelper {
      */
     public static void fitRaw(Window window, boolean isDark) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            int visibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+            int visibility = window.getDecorView().getSystemUiVisibility();
             if (isDark) {
                 visibility |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             } else {
-                visibility |= View.SYSTEM_UI_FLAG_VISIBLE;
+                visibility &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             }
             window.getDecorView().setSystemUiVisibility(visibility);
         }
