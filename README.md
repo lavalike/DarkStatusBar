@@ -5,7 +5,7 @@
 
 项目工程build.gradle添加依赖
 ``` gradle
-implementation 'com.wangzhen:dark-status-bar:0.0.5'
+implementation 'com.wangzhen:dark-status-bar:1.0.0'
 ```
 
 #### 使用方法
