@@ -24,11 +24,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-def vName = '0.0.4'
+def vName = '0.0.5'
 publish {
     userOrg = 'lavalike'//bintray.com用户名
     groupId = 'com.wangzhen'//jcenter上的路径
-    artifactId = 'DarkStatusBar'//项目名称
+    artifactId = 'dark-status-bar'//项目名称
     publishVersion = vName
     desc = '更改状态栏内文字和图标亮暗状态'
     website = 'https://github.com/lavalike/DarkStatusBar'
