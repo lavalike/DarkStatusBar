@@ -23,9 +23,7 @@ public final class RomActionImpl implements RomAction {
 
     @Override
     public void fitMIUI(Window window, boolean isDark) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            FitHelper.fitMIUI(window, isDark);
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             FitHelper.fitRaw(window, isDark);
         } else {
             FitHelper.fitMIUI(window, isDark);
